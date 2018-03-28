@@ -137,9 +137,9 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1522072165, 380645, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1522249533, 572049, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000a6345a47168b2e092379f05c9331131a543ee1b7cdd7d31456a5db70c5"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000007be8267416ac083a55c7ae1cf7e91c17455913b0294c0a4b0a8cca2ca11"));
         assert(genesis.hashMerkleRoot == uint256S("0xeb04f11ee83024b30a25033df56cb0289420c02be09cbcc984ba586cbca41270"));
 
         //vSeeds.push_back(CDNSSeedData("104.238.183.6", "104.238.183.6"));
@@ -174,9 +174,16 @@ public:
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f";
 
+
+
         checkpointData = (CCheckpointData) {
-            boost::assign::map_list_of           
-            ( 0, uint256S("0x000000a6345a47168b2e092379f05c9331131a543ee1b7cdd7d31456a5db70c5"))
+            boost::assign::map_list_of
+            (   0, uint256S("0x000007be8267416ac083a55c7ae1cf7e91c17455913b0294c0a4b0a8cca2ca11")),
+
+            1522249533, // * UNIX timestamp of last checkpoint block
+            0,       // * total number of transactions between genesis and last checkpoint
+                        //   (the tx=... number in the SetBestChain debug.log lines)
+            100         // * estimated number of transactions per day after checkpoint
         };
     }
 };
