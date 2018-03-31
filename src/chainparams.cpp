@@ -181,9 +181,9 @@ public:
             (   0, uint256S("0x000007be8267416ac083a55c7ae1cf7e91c17455913b0294c0a4b0a8cca2ca11")),
 
             1522249533, // * UNIX timestamp of last checkpoint block
-            0,       // * total number of transactions between genesis and last checkpoint
+            1,       // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            100         // * estimated number of transactions per day after checkpoint
+            0         // * estimated number of transactions per day after checkpoint
         };
     }
 };
